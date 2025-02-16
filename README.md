@@ -1,6 +1,6 @@
 # GET Json from dummyjson.com 
 
-and write, load files
+and write, load files - this is help functions
 
 ```
 https://dummyjson.com/todos

@@ -46,7 +46,7 @@ killall -9 go
 $ go run ./cmd/api
 ```
 
-## point API and REST
+## Point API and REST 👾
 
 | Метод | Эндпоинт | Хендлер | Действие |
 | :---:   | :---: | :---: | :---: |
@@ -57,7 +57,7 @@ $ go run ./cmd/api
 | PUT | /v1/books/{id}   | editBookHandler | Обновляет информацию |
 | DELETE | /v1/books/{id}   | deleteBookHandler | Удаляет книгу |
 
-## use curl in terminal
+## Use curl in terminal ⚙️
 
 ```
 $ curl -i localhost:8000/v1/healthcheck

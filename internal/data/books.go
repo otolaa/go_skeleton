@@ -12,5 +12,5 @@ type Book struct {
 	Author    string    `json:"author"`
 	Year      int32     `json:"year,omitempty"` // "omitempty" скрывает поле, если значение поля пусто
 	Tags      []string  `json:"tags,omitempty"` // "omitempty" скрывает поле, если значение поля пусто
-	Pages     int32     `json:"pages"`
+	Pages     Pages     `json:"pages"`
 }

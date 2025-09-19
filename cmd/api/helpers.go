@@ -11,6 +11,8 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
+type envelope map[string]interface{}
+
 // readIDParam получает параметр id из контекста запроса, преобразует его в
 // целое число и возвращает его. Если операция не удалась,
 // возвращает 0 и сообщение об ошибке.
@@ -30,7 +32,7 @@ func (app *application) readIDParam(r *http.Request) (int64, error) {
 // включить в ответ.
 func (app *application) writeJSON(w http.ResponseWriter, status int, data interface{}, headers http.Header) error {
 	// Сериализуем данные в JSON. Возвращаем ошибку, если она возникает.
-	js, err := json.Marshal(data)
+	js, err := json.MarshalIndent(data, "", "\t")
 	if err != nil {
 		return err
 	}

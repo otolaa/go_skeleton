@@ -1,4 +1,4 @@
-# Go step by step
+# Go step by step 🍔
 
 ```
 go mod init

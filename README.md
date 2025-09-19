@@ -6,7 +6,7 @@ go mod tidy
 go run .
 ```
 
-## skeleton
+## Skeleton ☠️
 
 ```
 .
@@ -21,7 +21,7 @@ go run .
 |---Makefile
 ```
 
-## info for folder catalog
+## Info for folder catalog ⚔️
 
 ```
 bin — скомпилированные двоичные файлы, готовые к развёртыванию на рабочем сервере;
@@ -39,18 +39,11 @@ go.mod — информация о зависимостях проекта, ве
 Makefile — инструкции по автоматизации частых административных задач — проверка кода, создание двоичных файлов и выполнения миграций.
 ```
 
-
-## Run
+## Run 🚀
 
 ```
 killall -9 go
 $ go run ./cmd/api
-```
-
-## use curl in terminal, the -i curl returm header and body server:
-
-```
-$ curl -i localhost:8000/v1/healthcheck
 ```
 
 ## point API and REST
@@ -58,25 +51,23 @@ $ curl -i localhost:8000/v1/healthcheck
 | Метод | Эндпоинт | Хендлер | Действие |
 | :---:   | :---: | :---: | :---: |
 | GET | /v1/healthcheck   | healthcheckHandler | Информация о приложении |
+| GET | /v1/books|  | listBooksHandler | список книг |
 | POST | /v1/books   | createHandler | Создает новую книгу |
 | GET | /v1/books/{id}   | showBookHandler | Детали книги |
+| PUT | /v1/books/{id}   | editBookHandler | Обновляет информацию |
+| DELETE | /v1/books/{id}   | deleteBookHandler | Удаляет книгу |
 
-
-## test curl
+## use curl in terminal
 
 ```
-$ curl localhost:4000/v1/healthcheck
+$ curl -i localhost:8000/v1/healthcheck
 status: available
 environment: development
 version: 1.0.0
-```
 
-```
-$ curl -X POST localhost:4000/v1/books
+$ curl -i -X POST localhost:8000/v1/books
 create a new book
-```
 
-```
-$ curl localhost:4000/v1/books/12
+$ curl -i localhost:8000/v1/books/12
 show the details of book 12
 ```

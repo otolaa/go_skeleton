@@ -51,7 +51,7 @@ $ go run ./cmd/api
 | Метод | Эндпоинт | Хендлер | Действие |
 | :---:   | :---: | :---: | :---: |
 | GET | /v1/healthcheck   | healthcheckHandler | Информация о приложении |
-| GET | /v1/books|  | listBooksHandler | список книг |
+| GET | /v1/books  | listBooksHandler | список книг |
 | POST | /v1/books   | createHandler | Создает новую книгу |
 | GET | /v1/books/{id}   | showBookHandler | Детали книги |
 | PUT | /v1/books/{id}   | editBookHandler | Обновляет информацию |
